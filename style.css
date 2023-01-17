@@ -1,0 +1,55 @@
+body{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.texto{
+    border-style: dotted;
+    border-color: black;
+    background-color: bisque;
+    width: 25%;
+    height: 25%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 20px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 2%;
+    transform: translate();
+    animation: move 2s alternate linear infinite; 
+    transition: 2;
+}
+
+@keyframes move{
+    from{
+        transform: matrix3d(
+            1,0,0,0,
+            0,1,0,0,
+            0,0,1,0,
+            0,-1500,0,1.1
+        );
+    }
+    50%{
+        transform: matrix3d(
+            1,0,0,0,
+            0,1,0,0,
+            0,0,1,0,
+            0,0,0,0.9
+        );
+    }
+    to{
+        transform: matrix3d(
+            1,0,0,0,
+            0,1,0,0,
+            0,0,1,0,
+            0,0,0,0.5
+        );
+    }
+}
